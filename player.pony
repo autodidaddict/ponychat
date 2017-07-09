@@ -16,7 +16,7 @@ actor Player
         if _pname is None then
             _pname = cmd
             _conn.write("You've chosen a name.\n")                 
-            _cm.broadcast(_name() + " has logged in.\n")    
+            emitall("has logged in.\n")    
         else 
             _conn.write("[Debug] You typed " + cmd + ".\n" )
             emitall("typed '" + cmd + "'\n")
